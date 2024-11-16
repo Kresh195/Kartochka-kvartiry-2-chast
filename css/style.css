@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #c8c8c8;
+}
+
+.card__text {
+  font-size:  14px;
+  line-height: 35px;
+  color: #c8c8c8;;
+}
+
+.card__link:hover {
+  opacity: 0.7;
+  transform: translateY(-5px)
+}
+
+.sidebar {
+  width: 270px;
+  min-width: 200px;
+}
+
+.widget:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.widget__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.widget__title::after {
+  content: '';
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url("/img/chevron-up.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.location {
+  background-color: white;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.location__row {
+  display: flex;
+}
+
+.location__row:first-child {
+  overflow: hidden;
+  border: 1px solid #D6D6D6;
+  border-radius: 4px 4px 0 0;
+}
+
+.location__row:last-child {
+  border-radius: 0 0 4px 4px;
+  overflow: hidden; 
+  border: 1px solid #D6D6D6;
+  border-top: none;
+}
+
+.metro_distance_label {
+  flex-grow: 1;
+  border: none;
+  padding: 0 15px;
+  height: 50px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 50px;
+  color: #3C3C3C;
+  cursor: pointer;
+  transition-duration: 0.6s;
+}
+
+.metro_distance_label:hover {
+  background-color: #fff0bb;
+}
+
+.metro__distance__button {
+  /* height: 1px;
+  width: 1px;
+  opacity: 0;
+  position: absolute; */
+}
+
+.metro__distance__button:checked + .metro__distance__label {
+  background-color: blue;
+}
+
