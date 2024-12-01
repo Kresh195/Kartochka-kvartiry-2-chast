@@ -69,7 +69,7 @@ body {
   border-top: none;
 }
 
-.metro_distance_label {
+.metro__distance__label {
   flex-grow: 1;
   border: none;
   padding: 0 15px;
@@ -82,18 +82,252 @@ body {
   transition-duration: 0.6s;
 }
 
-.metro_distance_label:hover {
+.metro__distance__label:hover {
   background-color: #fff0bb;
 }
 
 .metro__distance__button {
-  /* height: 1px;
+  height: 1px;
   width: 1px;
   opacity: 0;
-  position: absolute; */
+  position: absolute;
 }
 
 .metro__distance__button:checked + .metro__distance__label {
-  background-color: blue;
+  background-color: #FFCF26;
 }
 
+.metro__distance__button:checked + .metro__distance__label:hover {
+  background-color: #fe9d1fde;
+}
+
+.radio__group {
+  display: block;
+  cursor: pointer;
+}
+
+.radio__group:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.handover_date_radio {
+  display: none;
+}
+
+.radio__fake {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #777;
+  vertical-align: bottom;
+}
+
+.radio__title {
+  font-size: 16px;
+  line-height: 1.18;
+  color: #000
+}
+
+.handover_date_radio:checked + .radio__fake {
+  background-color: #FFE074;
+}
+
+.handover_date_radio:checked ~ .radio__title {
+  font-weight: 700;
+}
+
+.handover_date_radio:checked + .radio__fake::before {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #3C3C3C;
+}
+
+.checkbox__group {
+  display: block;
+  cursor: pointer;
+}
+
+.checkbox__group:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.extra__options {
+  display: none;
+}
+
+.checkbox__fake {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #777;
+  border-radius: 2px;
+}
+
+.checkbox__title {
+  font-size: 16px;
+  line-height: 1.18;
+  color: #000
+}
+
+.extra__options:checked ~ .checkbox__fake {
+  background-color: #FFE074
+}
+
+.extra__options:checked ~ .checkbox__title {
+  font-weight: 700;
+}
+
+.extra__options:checked ~.checkbox__fake::before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('/img/feather-icon/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.widget__hidden {
+  display: none;
+}
+
+.show__hidden__button {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #4290c9;
+  padding: 0;
+  cursor: pointer;
+}
+
+.show__hidden__button:hover {
+  text-decoration: underline;
+}
+
+.hidden__extra__options {
+  display: none;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.toggle__title {
+  font-size: 16px;
+  line-height: 1.18;
+  color: #000;
+}
+
+.toggle__fake {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 37px;
+  height: 20px;
+  background-color: #8f8f8f;
+  border-radius: 10px;
+}
+
+.toggle__fake::before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-color: #3b3b3b;
+  border-radius: 50%;
+  transition: all .2s ease-in;
+}
+
+.hidden__extra__options:checked + .toggle__fake {
+  background-color: #FFE074
+}
+
+.hidden__extra__options:checked + .toggle__title {
+  font-weight: 700;
+}
+
+.hidden__extra__options:checked + .toggle__fake::before {
+  left: 19px;
+}
+
+.filter__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #D6D6D6;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #3C3C3C;
+  transition: background-color .2s ease-in;
+}
+
+.filter__button:first-child {
+  margin-bottom: 10px;
+}
+
+.filter__button:hover {
+  background-color: #e7e7e7;
+}
+
+.btn_sumbit {
+  border: none;
+  background-color: #FFCF26;
+  color: #000;
+}
+
+.btn_sumbit:hover {
+  background-color: #ffe173;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 830px;
+  }
+}
+
+@media (max-width: 829px) {
+  .container {
+    width: 600px;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 4px rgba(0 0 0 / 37%);
+  }
+}
+
+@media (max-width: 599px) {
+  .cards-holder {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
